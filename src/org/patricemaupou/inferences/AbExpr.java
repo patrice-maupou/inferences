@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 
 /**
  * abstract class of constants, variables and composite expressions
+ * 
  *
  * @author Patrice
  */
