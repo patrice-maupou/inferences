@@ -32,6 +32,20 @@ public class Construct {
     variable, constant
   };
 
+  /**
+   * pour les suites, on remplace "(a,b)" par "\\(a(,b)*\\)" avec repeat=",b"
+   * Le rang de chaque variable du texte (sans les \\) est notée dans 
+   * dans patternText, chaque variable est remplacée par (nul)rang, par exemple _1, _2 etc..
+   * 
+   * @param op l'opérateur de l'expression
+   * @param type so type
+   * @param patternText le modèle
+   * @param repeat 
+   * @param vars la liste des variables utilisées
+   * @param priority niveau de priorité de l'opération
+   * @param constrType négatif si parenthésage
+   * @param autopriority priorité de l'opérateur par rapport à lui-même (left pour 3+4+5=(3+4)+5 )
+   */
   public Construct(String op, Type type, String patternText, String repeat, List<Variable> vars, int priority, 
           int constrType, String autopriority) {
     this.op = op;

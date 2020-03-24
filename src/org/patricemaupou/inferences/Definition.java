@@ -5,20 +5,23 @@
  */
 package org.patricemaupou.inferences;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  *
  * @author Patrice Maupou
+ * 
+ * TODO  une définition comporte une ou plusieurs constructions ,
+ * exemple  construct : Cat(C)  (C est une catégorie, c'est la construction principale),
+ *            fonction  : Ob(C)   ( Ob est une fonction sur Cat -> Set)
+ *            fonction  : dom,cod:C -> Ob(C) 
+ *            fonction  : si f:Ob(C) alors y:cod'(f)-> 
  */
-public class Definition extends AbInfer {
+public class Definition {
   
-  private final AbExpr def;
+  private final Construct def;
   
-  public Definition(List<Variable> vars, AbExpr def, List<AbExpr> conds, Section section) {
-    super(vars, new ArrayList<>(Arrays.asList(def)), conds, section);
+  public Definition(List<Variable> vars, Construct def, Section section) {
     this.def = def;
   }
   

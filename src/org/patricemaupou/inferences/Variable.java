@@ -6,7 +6,6 @@
 package org.patricemaupou.inferences;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * TODO variable représentant des listes, exemple : R[] N[] ..
